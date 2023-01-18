@@ -13,6 +13,10 @@ Tom and I built the functionality for a webpage to do multiple things. These inc
 
 A user would open the link to this github repository, then would fork said repositiory. Next they would click the green code, which allows them make a copy of the linked ssh key. The user would then open the terminal to the directory they want to install this, and run git clone (ssh key they copied). From there they would cd into the directory, and then rode code . to open vs code and be up and running. 
 
+### Deployed Website:
+
+[RomCom](https://leftylincoln.github.io/romcom/)
+
 
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
