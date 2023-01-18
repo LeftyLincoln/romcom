@@ -31,6 +31,8 @@ viewSavedCoverButton.addEventListener("click", showSavedCovers)
 showHomeButton.addEventListener("click", showMainPage)
 makeMyBookButton.addEventListener('click', submitForm)
 saveButtonCover.addEventListener('click', storeSavedCovers)
+displaySavedCover.addEventListener('dblclick', deletePoster)
+
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -73,7 +75,7 @@ function showSavedCovers() {
   displaySavedCover.innerHTML = ""
   for (var i = 0; i < savedCovers.length; i++) { 
     displaySavedCover.innerHTML += `
-      <section class="mini-cover">
+      <section class="mini-cover" id=${savedCovers[i].id}>
       <img class="mini-cover" src=${savedCovers[i].cover}>
       <h2 class="cover-title">${savedCovers[i].title}</h2>
       <h3 class="tagline">A tale of ${savedCovers[i].tagline1} and ${savedCovers[i].tagline2}</h3>
@@ -114,10 +116,8 @@ function storeSavedCovers() {
   } 
 }
 
-
-
-
-
-
-
-
+function deletePoster(event) {
+var clickedParentId = event.target.parentElement.id
+var clickedParentElement = document.getElementById(clickedParentId)
+clickedParentElement.outerHTML = ''
+}
